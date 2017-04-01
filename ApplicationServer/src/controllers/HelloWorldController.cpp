@@ -3,7 +3,6 @@
 //
 
 #include "HelloWorldController.h"
-#include ""
 using namespace Mongoose;
 
 HelloWorldController::HelloWorldController() {

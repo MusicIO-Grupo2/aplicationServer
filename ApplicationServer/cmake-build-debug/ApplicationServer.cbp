@@ -44,6 +44,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/src"/>
+					<Add directory="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib"/>
+					<Add directory="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/json"/>
+					<Add directory="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
@@ -65,6 +69,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/src"/>
+					<Add directory="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib"/>
+					<Add directory="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/json"/>
+					<Add directory="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
@@ -80,6 +88,102 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Controller.cpp">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Controller.h">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/JsonController.cpp">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/JsonController.h">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/JsonResponse.cpp">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/JsonResponse.h">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Mutex.cpp">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Mutex.h">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Request.cpp">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Request.h">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Response.cpp">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Response.h">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Server.cpp">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Server.h">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Session.cpp">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Session.h">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Sessions.cpp">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Sessions.h">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/StreamResponse.cpp">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/StreamResponse.h">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/UploadFile.cpp">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/UploadFile.h">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Utils.cpp">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Utils.h">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/WebController.cpp">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/WebController.h">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/WebSocket.cpp">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/WebSocket.h">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/WebSockets.cpp">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/WebSockets.h">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/mongoose.c">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/mongoose.h">
+			<Option target="ApplicationServer"/>
+		</Unit>
 		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/src/controllers/HelloWorldController.cpp">
 			<Option target="ApplicationServer"/>
 		</Unit>

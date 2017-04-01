@@ -192,8 +192,50 @@ CMAKE_STRIP:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/Xcode
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Enables C++ binding
+CPP_BINDING:BOOL=ON
+
+//Enable url regex matching dispatcher
+ENABLE_REGEX_URL:BOOL=OFF
+
+//Enable server statistics
+ENABLE_STATS:BOOL=ON
+
+//Compile examples
+EXAMPLES:BOOL=OFF
+
+//Enables JsonCpp
+HAS_JSONCPP:BOOL=OFF
+
+//The directory the headers are installed in
+INCLUDE_INSTALL_DIR:PATH=/usr/local/include
+
+//Json C++ directory
+JSONCPP_DIR:STRING=/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/../jsoncpp
+
+//Path to a library.
+LIB{LIB}:FILEPATH=/usr/local/lib/libjsoncpp.dylib
+
+//Compile the main
+MAIN:BOOL=OFF
+
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
+
+//Enables websocket
+WEBSOCKET:BOOL=OFF
+
+//Value Computed by CMake
+mongoose_BINARY_DIR:STATIC=/Users/nicolas/CLionProjects/Taller2/ApplicationServer/cmake-build-debug/lib
+
+//The directory containing a CMake configuration file for mongoose.
+mongoose_DIR:PATH=mongoose_DIR-NOTFOUND
+
+//Dependencies for the target
+mongoose_LIB_DEPENDS:STATIC=general;dl;
+
+//Value Computed by CMake
+mongoose_SOURCE_DIR:STATIC=/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib
 
 
 ########################
@@ -272,6 +314,10 @@ CMAKE_GENERATOR:INTERNAL=Unix Makefiles
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Have symbol pthread_create
+CMAKE_HAVE_LIBC_CREATE:INTERNAL=1
+//Have include pthread.h
+CMAKE_HAVE_PTHREAD_H:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/Users/nicolas/CLionProjects/Taller2/ApplicationServer
@@ -333,6 +379,8 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding Threads
+FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: ProcessorCount_cmd_sysctl
 ProcessorCount_cmd_sysctl-ADVANCED:INTERNAL=1
 
