@@ -5,11 +5,15 @@
 #ifndef APPLICATIONSERVER_HELLOWORLDCONTROLLER_H
 #define APPLICATIONSERVER_HELLOWORLDCONTROLLER_H
 
+#include "../../lib/mongoose/WebController.h"
 
-class HelloWorldController {
+using namespace Mongoose;
+
+class HelloWorldController : public WebController {
 public:
     HelloWorldController();
-
+    void setup();
+    void hello(Request &request, StreamResponse &response);
 };
 
 
