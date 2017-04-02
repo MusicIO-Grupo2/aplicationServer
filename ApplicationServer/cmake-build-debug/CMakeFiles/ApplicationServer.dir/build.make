@@ -393,57 +393,9 @@ CMakeFiles/ApplicationServer.dir/lib/mongoose/WebController.cpp.o.provides: CMak
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebController.cpp.o.provides.build: CMakeFiles/ApplicationServer.dir/lib/mongoose/WebController.cpp.o
 
 
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o: CMakeFiles/ApplicationServer.dir/flags.make
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o: ../lib/mongoose/JsonResponse.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nicolas/CLionProjects/Taller2/ApplicationServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o -c /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/JsonResponse.cpp
-
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/JsonResponse.cpp > CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.i
-
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/JsonResponse.cpp -o CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.s
-
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o.requires:
-
-.PHONY : CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o.requires
-
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o.provides: CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ApplicationServer.dir/build.make CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o.provides.build
-.PHONY : CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o.provides
-
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o.provides.build: CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o
-
-
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o: CMakeFiles/ApplicationServer.dir/flags.make
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o: ../lib/mongoose/JsonController.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nicolas/CLionProjects/Taller2/ApplicationServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o -c /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/JsonController.cpp
-
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/JsonController.cpp > CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.i
-
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/JsonController.cpp -o CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.s
-
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o.requires:
-
-.PHONY : CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o.requires
-
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o.provides: CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ApplicationServer.dir/build.make CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o.provides.build
-.PHONY : CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o.provides
-
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o.provides.build: CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o
-
-
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSocket.cpp.o: CMakeFiles/ApplicationServer.dir/flags.make
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSocket.cpp.o: ../lib/mongoose/WebSocket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nicolas/CLionProjects/Taller2/ApplicationServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSocket.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nicolas/CLionProjects/Taller2/ApplicationServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSocket.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSocket.cpp.o -c /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/WebSocket.cpp
 
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSocket.cpp.i: cmake_force
@@ -467,7 +419,7 @@ CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSocket.cpp.o.provides.build: CM
 
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSockets.cpp.o: CMakeFiles/ApplicationServer.dir/flags.make
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSockets.cpp.o: ../lib/mongoose/WebSockets.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nicolas/CLionProjects/Taller2/ApplicationServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSockets.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nicolas/CLionProjects/Taller2/ApplicationServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSockets.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSockets.cpp.o -c /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/WebSockets.cpp
 
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSockets.cpp.i: cmake_force
@@ -505,8 +457,6 @@ ApplicationServer_OBJECTS = \
 "CMakeFiles/ApplicationServer.dir/lib/mongoose/StreamResponse.cpp.o" \
 "CMakeFiles/ApplicationServer.dir/lib/mongoose/UploadFile.cpp.o" \
 "CMakeFiles/ApplicationServer.dir/lib/mongoose/WebController.cpp.o" \
-"CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o" \
-"CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o" \
 "CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSocket.cpp.o" \
 "CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSockets.cpp.o"
 
@@ -527,13 +477,11 @@ ApplicationServer: CMakeFiles/ApplicationServer.dir/lib/mongoose/Sessions.cpp.o
 ApplicationServer: CMakeFiles/ApplicationServer.dir/lib/mongoose/StreamResponse.cpp.o
 ApplicationServer: CMakeFiles/ApplicationServer.dir/lib/mongoose/UploadFile.cpp.o
 ApplicationServer: CMakeFiles/ApplicationServer.dir/lib/mongoose/WebController.cpp.o
-ApplicationServer: CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o
-ApplicationServer: CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o
 ApplicationServer: CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSocket.cpp.o
 ApplicationServer: CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSockets.cpp.o
 ApplicationServer: CMakeFiles/ApplicationServer.dir/build.make
 ApplicationServer: CMakeFiles/ApplicationServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/nicolas/CLionProjects/Taller2/ApplicationServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable ApplicationServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/nicolas/CLionProjects/Taller2/ApplicationServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable ApplicationServer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ApplicationServer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -555,8 +503,6 @@ CMakeFiles/ApplicationServer.dir/requires: CMakeFiles/ApplicationServer.dir/lib/
 CMakeFiles/ApplicationServer.dir/requires: CMakeFiles/ApplicationServer.dir/lib/mongoose/StreamResponse.cpp.o.requires
 CMakeFiles/ApplicationServer.dir/requires: CMakeFiles/ApplicationServer.dir/lib/mongoose/UploadFile.cpp.o.requires
 CMakeFiles/ApplicationServer.dir/requires: CMakeFiles/ApplicationServer.dir/lib/mongoose/WebController.cpp.o.requires
-CMakeFiles/ApplicationServer.dir/requires: CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o.requires
-CMakeFiles/ApplicationServer.dir/requires: CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o.requires
 CMakeFiles/ApplicationServer.dir/requires: CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSocket.cpp.o.requires
 CMakeFiles/ApplicationServer.dir/requires: CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSockets.cpp.o.requires
 

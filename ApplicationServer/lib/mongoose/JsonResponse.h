@@ -25,7 +25,7 @@ namespace Mongoose
              *
              * @return string the response body
              */
-            virtual string getBody();
+            string getBody();
 
             /**
              * Sets the human readability of the response

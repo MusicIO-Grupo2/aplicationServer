@@ -17,29 +17,6 @@ CMakeFiles/ApplicationServer.dir/lib/mongoose/Controller.cpp.o: ../lib/mongoose/
 CMakeFiles/ApplicationServer.dir/lib/mongoose/Controller.cpp.o: ../lib/mongoose/UploadFile.h
 CMakeFiles/ApplicationServer.dir/lib/mongoose/Controller.cpp.o: ../lib/mongoose/WebSocket.h
 
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o: ../lib/json/json.h
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o: ../lib/mongoose/mongoose.h
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o: ../lib/mongoose/Controller.h
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o: ../lib/mongoose/JsonController.cpp
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o: ../lib/mongoose/JsonController.h
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o: ../lib/mongoose/JsonResponse.h
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o: ../lib/mongoose/Mutex.h
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o: ../lib/mongoose/Request.h
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o: ../lib/mongoose/RequestHandler.h
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o: ../lib/mongoose/Response.h
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o: ../lib/mongoose/Session.h
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o: ../lib/mongoose/Sessions.h
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o: ../lib/mongoose/StreamResponse.h
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o: ../lib/mongoose/UploadFile.h
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o: ../lib/mongoose/Utils.h
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o: ../lib/mongoose/WebController.h
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o: ../lib/mongoose/WebSocket.h
-
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o: ../lib/json/json.h
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o: ../lib/mongoose/JsonResponse.cpp
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o: ../lib/mongoose/JsonResponse.h
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o: ../lib/mongoose/Response.h
-
 CMakeFiles/ApplicationServer.dir/lib/mongoose/Mutex.cpp.o: ../lib/mongoose/Mutex.cpp
 CMakeFiles/ApplicationServer.dir/lib/mongoose/Mutex.cpp.o: ../lib/mongoose/Mutex.h
 
@@ -52,6 +29,7 @@ CMakeFiles/ApplicationServer.dir/lib/mongoose/Request.cpp.o: ../lib/mongoose/Upl
 CMakeFiles/ApplicationServer.dir/lib/mongoose/Response.cpp.o: ../lib/mongoose/Response.cpp
 CMakeFiles/ApplicationServer.dir/lib/mongoose/Response.cpp.o: ../lib/mongoose/Response.h
 
+CMakeFiles/ApplicationServer.dir/lib/mongoose/Server.cpp.o: ../lib/mongoose/mongoose.h
 CMakeFiles/ApplicationServer.dir/lib/mongoose/Server.cpp.o: ../lib/mongoose/Controller.h
 CMakeFiles/ApplicationServer.dir/lib/mongoose/Server.cpp.o: ../lib/mongoose/Mutex.h
 CMakeFiles/ApplicationServer.dir/lib/mongoose/Server.cpp.o: ../lib/mongoose/Request.h
@@ -66,7 +44,6 @@ CMakeFiles/ApplicationServer.dir/lib/mongoose/Server.cpp.o: ../lib/mongoose/Uplo
 CMakeFiles/ApplicationServer.dir/lib/mongoose/Server.cpp.o: ../lib/mongoose/Utils.h
 CMakeFiles/ApplicationServer.dir/lib/mongoose/Server.cpp.o: ../lib/mongoose/WebSocket.h
 CMakeFiles/ApplicationServer.dir/lib/mongoose/Server.cpp.o: ../lib/mongoose/WebSockets.h
-CMakeFiles/ApplicationServer.dir/lib/mongoose/Server.cpp.o: ../lib/mongoose/mongoose.h
 
 CMakeFiles/ApplicationServer.dir/lib/mongoose/Session.cpp.o: ../lib/mongoose/Mutex.h
 CMakeFiles/ApplicationServer.dir/lib/mongoose/Session.cpp.o: ../lib/mongoose/Session.cpp
@@ -106,6 +83,7 @@ CMakeFiles/ApplicationServer.dir/lib/mongoose/WebController.cpp.o: ../lib/mongoo
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebController.cpp.o: ../lib/mongoose/WebController.h
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebController.cpp.o: ../lib/mongoose/WebSocket.h
 
+CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSocket.cpp.o: ../lib/mongoose/mongoose.h
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSocket.cpp.o: ../lib/mongoose/Mutex.h
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSocket.cpp.o: ../lib/mongoose/Request.h
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSocket.cpp.o: ../lib/mongoose/Response.h
@@ -113,8 +91,8 @@ CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSocket.cpp.o: ../lib/mongoose/U
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSocket.cpp.o: ../lib/mongoose/WebSocket.cpp
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSocket.cpp.o: ../lib/mongoose/WebSocket.h
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSocket.cpp.o: ../lib/mongoose/WebSockets.h
-CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSocket.cpp.o: ../lib/mongoose/mongoose.h
 
+CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSockets.cpp.o: ../lib/mongoose/mongoose.h
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSockets.cpp.o: ../lib/mongoose/Mutex.h
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSockets.cpp.o: ../lib/mongoose/Request.h
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSockets.cpp.o: ../lib/mongoose/Response.h
@@ -122,7 +100,6 @@ CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSockets.cpp.o: ../lib/mongoose/
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSockets.cpp.o: ../lib/mongoose/WebSocket.h
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSockets.cpp.o: ../lib/mongoose/WebSockets.cpp
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSockets.cpp.o: ../lib/mongoose/WebSockets.h
-CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSockets.cpp.o: ../lib/mongoose/mongoose.h
 
 CMakeFiles/ApplicationServer.dir/src/controllers/HelloWorldController.cpp.o: ../lib/mongoose/Controller.h
 CMakeFiles/ApplicationServer.dir/src/controllers/HelloWorldController.cpp.o: ../lib/mongoose/Mutex.h

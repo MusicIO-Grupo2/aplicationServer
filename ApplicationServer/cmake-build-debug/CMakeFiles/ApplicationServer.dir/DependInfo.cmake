@@ -18,8 +18,6 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   )
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Controller.cpp" "/Users/nicolas/CLionProjects/Taller2/ApplicationServer/cmake-build-debug/CMakeFiles/ApplicationServer.dir/lib/mongoose/Controller.cpp.o"
-  "/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/JsonController.cpp" "/Users/nicolas/CLionProjects/Taller2/ApplicationServer/cmake-build-debug/CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o"
-  "/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/JsonResponse.cpp" "/Users/nicolas/CLionProjects/Taller2/ApplicationServer/cmake-build-debug/CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o"
   "/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Mutex.cpp" "/Users/nicolas/CLionProjects/Taller2/ApplicationServer/cmake-build-debug/CMakeFiles/ApplicationServer.dir/lib/mongoose/Mutex.cpp.o"
   "/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Request.cpp" "/Users/nicolas/CLionProjects/Taller2/ApplicationServer/cmake-build-debug/CMakeFiles/ApplicationServer.dir/lib/mongoose/Request.cpp.o"
   "/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Response.cpp" "/Users/nicolas/CLionProjects/Taller2/ApplicationServer/cmake-build-debug/CMakeFiles/ApplicationServer.dir/lib/mongoose/Response.cpp.o"

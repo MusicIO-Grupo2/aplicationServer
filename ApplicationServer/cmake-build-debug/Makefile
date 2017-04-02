@@ -150,60 +150,6 @@ lib/mongoose/Controller.cpp.s:
 	$(MAKE) -f CMakeFiles/ApplicationServer.dir/build.make CMakeFiles/ApplicationServer.dir/lib/mongoose/Controller.cpp.s
 .PHONY : lib/mongoose/Controller.cpp.s
 
-lib/mongoose/JsonController.o: lib/mongoose/JsonController.cpp.o
-
-.PHONY : lib/mongoose/JsonController.o
-
-# target to build an object file
-lib/mongoose/JsonController.cpp.o:
-	$(MAKE) -f CMakeFiles/ApplicationServer.dir/build.make CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o
-.PHONY : lib/mongoose/JsonController.cpp.o
-
-lib/mongoose/JsonController.i: lib/mongoose/JsonController.cpp.i
-
-.PHONY : lib/mongoose/JsonController.i
-
-# target to preprocess a source file
-lib/mongoose/JsonController.cpp.i:
-	$(MAKE) -f CMakeFiles/ApplicationServer.dir/build.make CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.i
-.PHONY : lib/mongoose/JsonController.cpp.i
-
-lib/mongoose/JsonController.s: lib/mongoose/JsonController.cpp.s
-
-.PHONY : lib/mongoose/JsonController.s
-
-# target to generate assembly for a file
-lib/mongoose/JsonController.cpp.s:
-	$(MAKE) -f CMakeFiles/ApplicationServer.dir/build.make CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.s
-.PHONY : lib/mongoose/JsonController.cpp.s
-
-lib/mongoose/JsonResponse.o: lib/mongoose/JsonResponse.cpp.o
-
-.PHONY : lib/mongoose/JsonResponse.o
-
-# target to build an object file
-lib/mongoose/JsonResponse.cpp.o:
-	$(MAKE) -f CMakeFiles/ApplicationServer.dir/build.make CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o
-.PHONY : lib/mongoose/JsonResponse.cpp.o
-
-lib/mongoose/JsonResponse.i: lib/mongoose/JsonResponse.cpp.i
-
-.PHONY : lib/mongoose/JsonResponse.i
-
-# target to preprocess a source file
-lib/mongoose/JsonResponse.cpp.i:
-	$(MAKE) -f CMakeFiles/ApplicationServer.dir/build.make CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.i
-.PHONY : lib/mongoose/JsonResponse.cpp.i
-
-lib/mongoose/JsonResponse.s: lib/mongoose/JsonResponse.cpp.s
-
-.PHONY : lib/mongoose/JsonResponse.s
-
-# target to generate assembly for a file
-lib/mongoose/JsonResponse.cpp.s:
-	$(MAKE) -f CMakeFiles/ApplicationServer.dir/build.make CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.s
-.PHONY : lib/mongoose/JsonResponse.cpp.s
-
 lib/mongoose/Mutex.o: lib/mongoose/Mutex.cpp.o
 
 .PHONY : lib/mongoose/Mutex.o
@@ -621,12 +567,6 @@ help:
 	@echo "... lib/mongoose/Controller.o"
 	@echo "... lib/mongoose/Controller.i"
 	@echo "... lib/mongoose/Controller.s"
-	@echo "... lib/mongoose/JsonController.o"
-	@echo "... lib/mongoose/JsonController.i"
-	@echo "... lib/mongoose/JsonController.s"
-	@echo "... lib/mongoose/JsonResponse.o"
-	@echo "... lib/mongoose/JsonResponse.i"
-	@echo "... lib/mongoose/JsonResponse.s"
 	@echo "... lib/mongoose/Mutex.o"
 	@echo "... lib/mongoose/Mutex.i"
 	@echo "... lib/mongoose/Mutex.s"

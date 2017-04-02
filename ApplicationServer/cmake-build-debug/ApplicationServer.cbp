@@ -88,22 +88,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/json/json-forwards.h">
+			<Option target="ApplicationServer"/>
+		</Unit>
+		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/json/json.h">
+			<Option target="ApplicationServer"/>
+		</Unit>
 		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Controller.cpp">
 			<Option target="ApplicationServer"/>
 		</Unit>
 		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Controller.h">
-			<Option target="ApplicationServer"/>
-		</Unit>
-		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/JsonController.cpp">
-			<Option target="ApplicationServer"/>
-		</Unit>
-		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/JsonController.h">
-			<Option target="ApplicationServer"/>
-		</Unit>
-		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/JsonResponse.cpp">
-			<Option target="ApplicationServer"/>
-		</Unit>
-		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/JsonResponse.h">
 			<Option target="ApplicationServer"/>
 		</Unit>
 		<Unit filename="/Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Mutex.cpp">

@@ -17,29 +17,6 @@ CMakeFiles/ApplicationServer.dir/lib/mongoose/Controller.cpp.o
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/StreamResponse.h
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/UploadFile.h
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/WebSocket.h
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o
- ../lib/json/json.h
- ../lib/mongoose/mongoose.h
- /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Controller.h
- /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/JsonController.cpp
- /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/JsonController.h
- /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/JsonResponse.h
- /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Mutex.h
- /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Request.h
- /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/RequestHandler.h
- /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Response.h
- /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Session.h
- /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Sessions.h
- /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/StreamResponse.h
- /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/UploadFile.h
- /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Utils.h
- /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/WebController.h
- /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/WebSocket.h
-CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o
- ../lib/json/json.h
- /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/JsonResponse.cpp
- /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/JsonResponse.h
- /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Response.h
 CMakeFiles/ApplicationServer.dir/lib/mongoose/Mutex.cpp.o
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Mutex.cpp
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Mutex.h
@@ -53,6 +30,7 @@ CMakeFiles/ApplicationServer.dir/lib/mongoose/Response.cpp.o
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Response.cpp
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Response.h
 CMakeFiles/ApplicationServer.dir/lib/mongoose/Server.cpp.o
+ ../lib/mongoose/mongoose.h
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Controller.h
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Mutex.h
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Request.h
@@ -67,7 +45,6 @@ CMakeFiles/ApplicationServer.dir/lib/mongoose/Server.cpp.o
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Utils.h
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/WebSocket.h
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/WebSockets.h
- /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/mongoose.h
 CMakeFiles/ApplicationServer.dir/lib/mongoose/Session.cpp.o
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Mutex.h
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Session.cpp
@@ -107,6 +84,7 @@ CMakeFiles/ApplicationServer.dir/lib/mongoose/WebController.cpp.o
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/WebController.h
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/WebSocket.h
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSocket.cpp.o
+ ../lib/mongoose/mongoose.h
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Mutex.h
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Request.h
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Response.h
@@ -114,8 +92,8 @@ CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSocket.cpp.o
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/WebSocket.cpp
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/WebSocket.h
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/WebSockets.h
- /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/mongoose.h
 CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSockets.cpp.o
+ ../lib/mongoose/mongoose.h
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Mutex.h
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Request.h
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/Response.h
@@ -123,7 +101,6 @@ CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSockets.cpp.o
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/WebSocket.h
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/WebSockets.cpp
  /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/WebSockets.h
- /Users/nicolas/CLionProjects/Taller2/ApplicationServer/lib/mongoose/mongoose.h
 CMakeFiles/ApplicationServer.dir/src/controllers/HelloWorldController.cpp.o
  ../lib/mongoose/Controller.h
  ../lib/mongoose/Mutex.h

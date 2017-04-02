@@ -13,8 +13,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/ApplicationServer.dir/lib/mongoose/StreamResponse.cpp.o"
   "CMakeFiles/ApplicationServer.dir/lib/mongoose/UploadFile.cpp.o"
   "CMakeFiles/ApplicationServer.dir/lib/mongoose/WebController.cpp.o"
-  "CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonResponse.cpp.o"
-  "CMakeFiles/ApplicationServer.dir/lib/mongoose/JsonController.cpp.o"
   "CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSocket.cpp.o"
   "CMakeFiles/ApplicationServer.dir/lib/mongoose/WebSockets.cpp.o"
   "ApplicationServer.pdb"

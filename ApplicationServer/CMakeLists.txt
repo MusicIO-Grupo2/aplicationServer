@@ -3,6 +3,7 @@ project(ApplicationServer)
 set(PROJECT_NAME "ApplicationServer")
 set(CMAKE_CXX_STANDARD 11)
 
+
 set(ROOT_PATH "${${PROJECT_NAME}_SOURCE_DIR}")
 
 
@@ -13,7 +14,21 @@ set(SOURCE_FILES src/main.cpp src/controllers/HelloWorldController.cpp src/contr
 
 
 set(LIBS_PATH "${ROOT_PATH}/lib")
-set(LIBS_NAMES mongoose jsoncpp)
+set(LIBS_NAMES mongoose json jsoncpp)
+foreach (LIB ${LIBS_NAMES})
+    find_library(LIB{LIB} NAMES ${LIB})
+    if (LIB{LIB}) #False si es 0, OFF, NO, FALSE, N, IGNORE, NOTFOUND, vacio, o si termina en "-NOTFOUND". Caso contrario es TRUE.
+        message(STATUS "Lib |${LIB}| found!")
+    else (LIB${LIB})
+        message(FATAL_ERROR "|${LIB}| lib not found.")
+    endif (LIB{LIB})
+endforeach (LIB ${LIBS_NAMES})
+
+set(JSON_CPP "${LIBS_PATH}/json")
+set(JSON_SOURCES
+        ${JSON_CPP}/json.h
+        ${JSON_CPP}/json-forwads.h)
+
 
 set(MONGOOSE_CPP "${LIBS_PATH}/mongoose")
 
@@ -31,12 +46,14 @@ set(MONGOOSE_SOURCES
         ${MONGOOSE_CPP}/StreamResponse.cpp
         ${MONGOOSE_CPP}/UploadFile.cpp
         ${MONGOOSE_CPP}/WebController.cpp
-        ${MONGOOSE_CPP}/JsonResponse.cpp
-        ${MONGOOSE_CPP}/JsonController.cpp
         ${MONGOOSE_CPP}/WebSocket.cpp
         ${MONGOOSE_CPP}/WebSockets.cpp)
 
 
+set(JSON_SOURCES
+        ${LIBS_PATH}/json/json.h
+        ${LIBS_PATH}/json/json-forwards.h
+        )
 
 include_directories(src)
 include_directories(lib)
@@ -44,7 +61,9 @@ include_directories(lib/json)
 include_directories(lib/mongoose)
 include_directories(${LIBS_PATH})
 include_directories("${MONGOOSE_CPP}")
+include_directories("${JSON_CPP}")
 
 
 
-add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${MONGOOSE_SOURCES} )
+add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${MONGOOSE_SOURCES} ${JSON_SOURCES})
+target_link_libraries(${PROJECT_NAME})
