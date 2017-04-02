@@ -5,7 +5,7 @@
 #ifndef APPLICATIONSERVER_HELLOWORLDCONTROLLER_H
 #define APPLICATIONSERVER_HELLOWORLDCONTROLLER_H
 
-#include "../../lib/mongoose/WebController.h"
+#include <mongoose/WebController.h>
 
 using namespace Mongoose;
 

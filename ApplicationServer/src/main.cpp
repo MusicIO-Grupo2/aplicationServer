@@ -2,8 +2,7 @@
 #include <signal.h>
 #include <zconf.h>
 #include "controllers/HelloWorldController.h"
-#include "../lib/mongoose/Server.h"
-#include "../lib/mongoose/WebController.h"
+#include <mongoose/Server.h>
 
 using namespace std;
 using namespace Mongoose;

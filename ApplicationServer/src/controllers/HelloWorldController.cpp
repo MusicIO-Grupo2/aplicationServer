@@ -3,7 +3,6 @@
 //
 
 #include "HelloWorldController.h"
-#include ""
 using namespace Mongoose;
 
 HelloWorldController::HelloWorldController() {
@@ -12,7 +11,7 @@ HelloWorldController::HelloWorldController() {
 
 void HelloWorldController::hello(Request &request, StreamResponse &response) {
 
-    response << "Hello" << endl;
+    response << "Hello Nico" << endl;
 
 };
 
