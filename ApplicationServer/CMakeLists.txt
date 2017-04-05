@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.7)
 project(ApplicationServer)
 set(PROJECT_NAME "ApplicationServer")
 set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_COMPILER clang++)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
 
 
 set(ROOT_PATH "${${PROJECT_NAME}_SOURCE_DIR}")
@@ -70,6 +72,6 @@ message(STATUS "FIN!")
 
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${MONGOOSE_SOURCES} ${JSON_SOURCES})
-target_link_libraries(${PROJECT_NAME})
+target_link_libraries(${PROJECT_NAME} mongocxx bsoncxx)
 target_link_libraries(${PROJECT_NAME} ${LIBMONGOCXX_LIBRARIES})
 target_link_libraries(${PROJECT_NAME} ${LIBBSONCXX_LIBRARIES})
