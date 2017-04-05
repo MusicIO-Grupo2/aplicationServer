@@ -16,32 +16,32 @@ Es necesario una version de [CMake](https://cmake.org/download/) de 3.7 mínima.
 
 ## Compilación
 ```
-	$ cd ApplicationServer
+$ cd ApplicationServer
 
-	$ mkdir build
+$ mkdir build
 
-	$ cd build
+$ cd build
 
-	$ cmake ..
+$ cmake ..
 ```
 
 Una vez compilado el proyecto se debe generar el ejecutable.  Para esto correr el siguiente comando: (dentro de la caperta build)
-	
+
 ```
-	$ make
+$ make
 ```
 
 Despues de generado el ejecutable, solamente faltaría ejecutarlo: (dentro de la carpeta build)
 ```
-	$ ./ApplicationServer 
+$ ./ApplicationServer 
 ```
 
 Una vez corriendo, la aplicación estará escuchando en el puerto 8080.
 
 ### Posibles problemas al compilar:
-	Es posible que no encuentren correctamente la librería de los drivers de mongocxx, un posible motivo es el directorio de la librería:
-		
-		1. Buscar en el directorio /usr/local/include las carpetas mongocxx y bsoncxx
-		2. Si dentro de estas carpetas se encuentra dos subcarpetas (siendo la segunda mongocxx / bsoncxx), se deberá eliminar la carpeta intermedia
-		3. Finalmente debe quedar una estructura de /usr/local/include/mongocxx/$[archivos]
+Es posible que no encuentren correctamente la librería de los drivers de mongocxx, un posible motivo es el directorio de la librería:
+
+1. Buscar en el directorio /usr/local/include las carpetas mongocxx y bsoncxx
+2. Si dentro de estas carpetas se encuentra dos subcarpetas (siendo la segunda mongocxx / bsoncxx), se deberá eliminar la carpeta intermedia
+3. Finalmente debe quedar una estructura de /usr/local/include/mongocxx/$[archivos]
 
