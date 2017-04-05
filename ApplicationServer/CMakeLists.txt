@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.7)
 project(ApplicationServer)
 set(PROJECT_NAME "ApplicationServer")
 set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_COMPILER clang++)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
 
 
 set(ROOT_PATH "${${PROJECT_NAME}_SOURCE_DIR}")
@@ -14,13 +16,13 @@ set(SOURCE_FILES src/main.cpp src/controllers/HelloWorldController.cpp src/contr
 
 
 set(LIBS_PATH "${ROOT_PATH}/lib")
-set(LIBS_NAMES mongoose json jsoncpp)
+set(LIBS_NAMES mongoose json jsoncpp mongocxx libmongocxx libbsoncxx)
 foreach (LIB ${LIBS_NAMES})
     find_library(LIB{LIB} NAMES ${LIB})
     if (LIB{LIB}) #False si es 0, OFF, NO, FALSE, N, IGNORE, NOTFOUND, vacio, o si termina en "-NOTFOUND". Caso contrario es TRUE.
         message(STATUS "Lib |${LIB}| found!")
     else (LIB${LIB})
-        message(FATAL_ERROR "|${LIB}| lib not found.")
+        message(STATUS "|${LIB}| lib not found.")
     endif (LIB{LIB})
 endforeach (LIB ${LIBS_NAMES})
 
@@ -55,6 +57,9 @@ set(JSON_SOURCES
         ${LIBS_PATH}/json/json-forwards.h
         )
 
+include_directories(${LIBMONGOCXX_INCLUDE_DIR}/v_noabi)
+include_directories(${LIBBSONCXX_INCLUDE_DIR}/v_noabi)
+
 include_directories(src)
 include_directories(lib)
 include_directories(lib/json)
@@ -63,7 +68,10 @@ include_directories(${LIBS_PATH})
 include_directories("${MONGOOSE_CPP}")
 include_directories("${JSON_CPP}")
 
+message(STATUS "FIN!")
 
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${MONGOOSE_SOURCES} ${JSON_SOURCES})
-target_link_libraries(${PROJECT_NAME})
+target_link_libraries(${PROJECT_NAME} mongocxx bsoncxx)
+target_link_libraries(${PROJECT_NAME} ${LIBMONGOCXX_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} ${LIBBSONCXX_LIBRARIES})
