@@ -11,12 +11,12 @@ set(ROOT_PATH "${${PROJECT_NAME}_SOURCE_DIR}")
 
 set(SRC_PATH "${ROOT_PATH}/src")
 
-set(SOURCE_FILES src/main.cpp src/controllers/HelloWorldController.cpp src/controllers/HelloWorldController.h)
+set(SOURCE_FILES src/main.cpp src/controllers/HelloWorldController.cpp src/controllers/HelloWorldController.h src/utils/LoggerManager.cpp src/utils/LoggerManager.h)
 
 
 
 set(LIBS_PATH "${ROOT_PATH}/lib")
-set(LIBS_NAMES mongoose json jsoncpp mongocxx libmongocxx libbsoncxx)
+set(LIBS_NAMES mongoose json jsoncpp mongocxx libmongocxx libbsoncxx spdlog)
 foreach (LIB ${LIBS_NAMES})
     find_library(LIB{LIB} NAMES ${LIB})
     if (LIB{LIB}) #False si es 0, OFF, NO, FALSE, N, IGNORE, NOTFOUND, vacio, o si termina en "-NOTFOUND". Caso contrario es TRUE.
@@ -49,16 +49,18 @@ set(MONGOOSE_SOURCES
         ${MONGOOSE_CPP}/UploadFile.cpp
         ${MONGOOSE_CPP}/WebController.cpp
         ${MONGOOSE_CPP}/WebSocket.cpp
-        ${MONGOOSE_CPP}/WebSockets.cpp)
+        ${MONGOOSE_CPP}/WebSockets.cpp src/utils/LoggerManager.cpp src/utils/LoggerManager.h)
 
 
 set(JSON_SOURCES
         ${LIBS_PATH}/json/json.h
         ${LIBS_PATH}/json/json-forwards.h
-        )
+        src/utils/LoggerManager.cpp src/utils/LoggerManager.h)
 
 include_directories(${LIBMONGOCXX_INCLUDE_DIR}/v_noabi)
 include_directories(${LIBBSONCXX_INCLUDE_DIR}/v_noabi)
+include_directories(${LIBs_PATH}/spdlog)
+link_directories(${LIBs_PATH}/spdlog)
 
 include_directories(src)
 include_directories(lib)
@@ -71,7 +73,7 @@ include_directories("${JSON_CPP}")
 message(STATUS "FIN!")
 
 
-add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${MONGOOSE_SOURCES} ${JSON_SOURCES})
+add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${MONGOOSE_SOURCES} ${JSON_SOURCES} src/utils/LoggerManager.cpp src/utils/LoggerManager.h)
 target_link_libraries(${PROJECT_NAME} mongocxx bsoncxx)
 target_link_libraries(${PROJECT_NAME} ${LIBMONGOCXX_LIBRARIES})
 target_link_libraries(${PROJECT_NAME} ${LIBBSONCXX_LIBRARIES})

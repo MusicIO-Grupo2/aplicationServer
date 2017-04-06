@@ -6,10 +6,13 @@
 #include <bsoncxx/json.hpp>
 #include <mongocxx/client.hpp>
 #include <mongocxx/instance.hpp>
-#include <mongocxx/stdx.hpp>
+#include <spdlog/spdlog.h>
+#include "utils/LoggerManager.h"
 
 using namespace std;
 using namespace Mongoose;
+
+namespace spd = spdlog;
 
 using bsoncxx::builder::stream::close_array;
 using bsoncxx::builder::stream::close_document;
@@ -20,12 +23,15 @@ using bsoncxx::builder::stream::open_document;
 
 int main() {
 
+    LoggerManager::Instance()->logInfo("Conectando a la base mongo...");
     std::cout << "Connecting to mongo..." << std::endl;
 
     mongocxx::instance instance{}; // This should be done only once.
     mongocxx::uri uri("mongodb://localhost:27017");
     mongocxx::client client(uri);
+
     mongocxx::database db = client["TallerTest"];
+
 
 
     HelloWorldController myController;

@@ -7,6 +7,7 @@
 #include <mongocxx/stdx.hpp>
 #include <mongocxx/uri.hpp>
 #include "HelloWorldController.h"
+#include "../utils/LoggerManager.h"
 
 using namespace Mongoose;
 
@@ -22,7 +23,7 @@ HelloWorldController::HelloWorldController() {
 }
 
 void HelloWorldController::hello(Request &request, StreamResponse &response) {
-
+    LoggerManager::Instance()->logInfo("Service /hello");
     mongocxx::uri uri("mongodb://localhost:27017");
     mongocxx::client client(uri);
     mongocxx::database db = client["TallerTest"];
