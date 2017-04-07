@@ -46,12 +46,12 @@ Es posible que no encuentren correctamente la librería de los drivers de mongoc
 3. Finalmente debe quedar una estructura de /usr/local/include/mongocxx/$[archivos]
 
 ## API
-	Servicios:
+Servicios:
 
-	- Server Hello
-	´´´
+- Server Hello
+	
 	GET: http://localhost:8080/hello?name=[nombre]
-	´´´	
-	El servidor responde al saludo, si no se le pasa un nombre como parámetro lo saludara preguntado su nombre.  Si se le pasa un nombre
+		
+El servidor responde al saludo, si no se le pasa un nombre como parámetro lo saludara preguntado su nombre.  Si se le pasa un nombre
 	lo buscara en la base de datos, si lo encuentra le devolverá el usuario, sino responderá que no esta registrado todavia y procedera a registrarlo.x
 	
