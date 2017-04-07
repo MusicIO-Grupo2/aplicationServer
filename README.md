@@ -45,3 +45,13 @@ Es posible que no encuentren correctamente la librería de los drivers de mongoc
 2. Si dentro de estas carpetas se encuentra dos subcarpetas (siendo la segunda mongocxx / bsoncxx), se deberá eliminar la carpeta intermedia
 3. Finalmente debe quedar una estructura de /usr/local/include/mongocxx/$[archivos]
 
+## API
+	Servicios:
+
+	- Server Hello
+	´´´
+	GET: http://localhost:8080/hello?name=[nombre]
+	´´´	
+	El servidor responde al saludo, si no se le pasa un nombre como parámetro lo saludara preguntado su nombre.  Si se le pasa un nombre
+	lo buscara en la base de datos, si lo encuentra le devolverá el usuario, sino responderá que no esta registrado todavia y procedera a registrarlo.x
+	
