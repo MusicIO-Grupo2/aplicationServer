@@ -26,8 +26,8 @@ void HelloWorldController::hello(Request &request, StreamResponse &response) {
     LoggerManager::Instance()->logInfo("Service /hello");
     mongocxx::uri uri("mongodb://localhost:27017");
     mongocxx::client client(uri);
-    mongocxx::database db = client["TallerTest"];
-    mongocxx::collection coll = db["collectionTest"];
+    mongocxx::database db = client["TallerTest2"];
+    mongocxx::collection coll = db["users"];
 
     string username = htmlEntities(request.get("name", "... what is your name ?"));
 
