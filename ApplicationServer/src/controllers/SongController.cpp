@@ -23,8 +23,15 @@ SongController::SongController() {}
 
 void SongController::returnSong(Request &request, JsonResponse &response) {
     string songID = htmlEntities(request.get("songID", ""));
-    Song *possibleSong = new Song(songID,"","","");
-    response["success"] = possibleSong->getSongFromDB();
+    Song *possibleSong = new Song();
+    possibleSong->setSongID(songID);
+    if (possibleSong->getSongFromDB()){
+        response["success"] = true;
+        response["songFileName"] = possibleSong->getSongFileName();
+        response["songData"] = possibleSong->getSongData();
+    } else {
+        response["success"] = false;
+    }
 
 
 
@@ -38,8 +45,9 @@ void SongController::uploadSong(Request &request, JsonResponse &response) {
     std::vector<Mongoose::UploadFile>::iterator it = request.uploadFiles.begin();
 
     Song* aSong = new Song("",it->getName(),it->getData(),"tallerSongs");
-    response["songName"] = it->getName();
+    response["songFileName"] = aSong->getSongFileName();
     response["songID"] = aSong->storeSongInDB();
+    response["songData"] = it->getData();
 
 }
 

@@ -7,7 +7,9 @@
 #include <sstream>
 #include <fstream>
 #include <ctime>
+#include <json.h>
 
+Song::Song() {}
 
 Song::Song(string songID, string songName, string file, string filePath ) {
     time_t now = time(0);
@@ -26,8 +28,8 @@ Song::Song(string songID, string songName, string file, string filePath ) {
          << ":"
          << 1 + ltm->tm_sec;
 
-    this->songName = date.str().append("_").append(songName);
-    oss << filePath << "/" << this->songName;
+    this->songFileName = date.str().append("_").append(songName);
+    oss << filePath << "/" << this->songFileName;
     fstream aFile;
     aFile.open(oss.str().c_str(), fstream::out);
     aFile << file;
@@ -43,7 +45,7 @@ bool  Song::getSongFromDB() {
         return false;
     mongocxx::uri uri("mongodb://localhost:27017");
     mongocxx::client client(uri);
-    mongocxx::database db = client["TallerTest"];
+    mongocxx::database db = client["songTest"];
     mongocxx::collection coll = db["collectionTest"];
     bsoncxx::oid myoid(this->songID.c_str());
 
@@ -52,6 +54,25 @@ bool  Song::getSongFromDB() {
             coll.find_one(document{} << "_id" << myoid << finalize);
     if (maybe_result){
         string fileJson = bsoncxx::to_json(*maybe_result);
+        Json::Value root;
+        Json::Reader reader;
+        reader.parse( fileJson.c_str(), root );
+        this->filePath = root.get("filePath","").asString();
+        this->songFileName = root.get("songFileName","").asString();
+        ostringstream oss;
+        oss << filePath << "/" << songFileName;
+        fstream aFile;
+        aFile.open(oss.str().c_str(), fstream::out);
+        this->file = "";
+        if (aFile.is_open()){
+            while (!aFile.eof()){
+                char buffer [100];
+                aFile >> buffer;
+                this->file.append(buffer);
+            }
+        }
+
+
         return true;
     }
     return false;
@@ -67,11 +88,23 @@ string Song::storeSongInDB() {
 
     bsoncxx::document::value doc_value = builder
             << "filePath" << filePath
-            << "songName" << songName
+            << "songFileName" << songFileName
             << bsoncxx::builder::stream::finalize;
     mongocxx::stdx::optional<mongocxx::result::insert_one> result = coll.insert_one(doc_value.view());
     return result->inserted_id().get_oid().value.to_string();
 
 
+}
+
+string Song::getSongFileName() {
+    return songFileName;
+}
+
+void Song::setSongID(string songID) {
+    this->songID = songID;
+}
+
+string Song::getSongData() {
+    return this->file;
 }
 

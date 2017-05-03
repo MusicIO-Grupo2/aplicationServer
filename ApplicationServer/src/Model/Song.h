@@ -16,11 +16,13 @@ public:
     Song(string songID, string songName, string file, string filePath);
     bool  getSongFromDB();
     string storeSongInDB();
-
+    string getSongFileName();
+    string getSongData();
+    void setSongID(string songID);
 
 private:
     string songID;
-    string songName;
+    string songFileName;
     string file;
     string filePath;
 };
