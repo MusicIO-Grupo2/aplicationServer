@@ -1,5 +1,3 @@
-#include <iostream>
-#include <zconf.h>
 #include "controllers/HelloWorldController.h"
 #include <mongoose/Server.h>
 #include <vector>
@@ -8,7 +6,7 @@
 #include <mongocxx/instance.hpp>
 #include <spdlog/spdlog.h>
 #include "utils/LoggerManager.h"
-
+#include "controllers/SongController.h"
 using namespace std;
 using namespace Mongoose;
 
@@ -23,6 +21,13 @@ using bsoncxx::builder::stream::open_document;
 
 int main() {
 
+    const int dir_err = system("mkdir -p tallerSongs");
+    if (-1 == dir_err)
+    {
+        printf("Error creating directory!n");
+        exit(1);
+    }
+
     LoggerManager::Instance()->logInfo("Conectando a la base mongo...");
     std::cout << "Connecting to mongo..." << std::endl;
 
@@ -35,8 +40,11 @@ int main() {
 
 
     HelloWorldController myController;
+    SongController songController;
+
     Server server(8080);
     server.registerController(&myController);
+    server.registerController(&songController);
 
     server.start();
     std::cout << "Server UP!" << std::endl;
