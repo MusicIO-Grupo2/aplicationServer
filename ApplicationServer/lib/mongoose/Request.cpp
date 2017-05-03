@@ -192,6 +192,17 @@ namespace Mongoose
         return true;
     }
 
+    string Request::getPostBody(){
+        const char *dataField;
+        string output;
+
+        dataField = data.c_str();
+        return string(dataField);
+    }
+
+    mg_connection* Request::getConnection() {
+        return connection;
+    }
 
     string Request::get(string key, string fallback)
     {

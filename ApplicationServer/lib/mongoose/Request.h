@@ -90,6 +90,8 @@ namespace Mongoose
             string getUrl();
             string getMethod();
             string getData();
+            string getPostBody();
+            mg_connection* getConnection();
 
 #ifdef ENABLE_REGEX_URL
             smatch getMatches();
