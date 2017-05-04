@@ -62,15 +62,16 @@ bool  Song::getSongFromDB() {
         ostringstream oss;
         oss << filePath << "/" << songFileName;
         ifstream aFile (oss.str().c_str(), ios::in | ios::binary);
-       // aFile.open(oss.str().c_str(), fstream::out);
         this->file = "";
         if (aFile.is_open()){
             string line;
-            while (! aFile.eof() )
-            {
-                getline (aFile,line);
-                this->file.append(line);
-            }
+
+            std::vector<char> buffer((
+                                             std::istreambuf_iterator<char>(aFile)),
+                                     (std::istreambuf_iterator<char>()));
+            this->file = std::string (buffer.begin(),buffer.end());
+            aFile.close();
+
         }
 
 
