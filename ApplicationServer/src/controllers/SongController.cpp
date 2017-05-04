@@ -9,6 +9,7 @@
 #include "../utils/LoggerManager.h"
 #include "SongController.h"
 #include "../Model/Song.h"
+#include "../utils/base64.h"
 
 using namespace Mongoose;
 
@@ -21,16 +22,17 @@ using bsoncxx::builder::stream::open_document;
 
 SongController::SongController() {}
 
-void SongController::returnSong(Request &request, JsonResponse &response) {
+void SongController::returnSong(Request &request, StreamResponse &response) {
     string songID = htmlEntities(request.get("songID", ""));
     Song *possibleSong = new Song();
     possibleSong->setSongID(songID);
     if (possibleSong->getSongFromDB()){
-        response["success"] = true;
-        response["songFileName"] = possibleSong->getSongFileName();
-        response["songData"] = possibleSong->getSongData();
+        //response["success"] = true;
+        //response = possibleSong->getSongData();
+        response << possibleSong->getSongData();
+
     } else {
-        response["success"] = false;
+        //response["success"] = false;
     }
 
 
@@ -47,14 +49,15 @@ void SongController::uploadSong(Request &request, JsonResponse &response) {
     Song* aSong = new Song("",it->getName(),it->getData(),"tallerSongs");
     response["songFileName"] = aSong->getSongFileName();
     response["songID"] = aSong->storeSongInDB();
-    response["songData"] = it->getData();
+
+
 
 }
 
 void SongController::setup() {
 
-    addRouteResponse("GET", "/song", SongController, returnSong,JsonResponse);
-    addRouteResponse("POST", "/song", SongController, uploadSong,JsonResponse);
+    addRouteResponse("GET", "/song", SongController, returnSong,StreamResponse);
+    addRouteResponse("POST", "/song", SongController, uploadSong, JsonResponse);
 
 
 }

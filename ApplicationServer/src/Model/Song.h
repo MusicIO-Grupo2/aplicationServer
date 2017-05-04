@@ -18,6 +18,7 @@ public:
     string storeSongInDB();
     string getSongFileName();
     string getSongData();
+    string getFilePath();
     void setSongID(string songID);
 
 private:

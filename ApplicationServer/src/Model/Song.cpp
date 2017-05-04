@@ -23,9 +23,9 @@ Song::Song(string songID, string songName, string file, string filePath ) {
          << 1900 + ltm->tm_year
          << "-"
          << 1 + ltm->tm_hour
-         << ":"
+         << " "
          << 1 + ltm->tm_min
-         << ":"
+         << " "
          << 1 + ltm->tm_sec;
 
     this->songFileName = date.str().append("_").append(songName);
@@ -61,14 +61,15 @@ bool  Song::getSongFromDB() {
         this->songFileName = root.get("songFileName","").asString();
         ostringstream oss;
         oss << filePath << "/" << songFileName;
-        fstream aFile;
-        aFile.open(oss.str().c_str(), fstream::out);
+        ifstream aFile (oss.str().c_str(), ios::in | ios::binary);
+       // aFile.open(oss.str().c_str(), fstream::out);
         this->file = "";
         if (aFile.is_open()){
-            while (!aFile.eof()){
-                char buffer [100];
-                aFile >> buffer;
-                this->file.append(buffer);
+            string line;
+            while (! aFile.eof() )
+            {
+                getline (aFile,line);
+                this->file.append(line);
             }
         }
 

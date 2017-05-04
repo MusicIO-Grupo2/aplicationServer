@@ -17,7 +17,7 @@ class SongController : public JsonController {
 public:
     SongController();
     void setup();
-    void returnSong(Request &request, JsonResponse &response);
+    void returnSong(Request &request, StreamResponse &response);
     void uploadSong(Request &request, JsonResponse &response);
 
 

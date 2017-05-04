@@ -9,7 +9,7 @@ set(ROOT_PATH "${${PROJECT_NAME}_SOURCE_DIR}")
 
 set(SRC_PATH "${ROOT_PATH}/src")
 
-set(SOURCE_FILES src/main.cpp src/controllers/HelloWorldController.cpp src/controllers/HelloWorldController.h src/utils/LoggerManager.cpp src/utils/LoggerManager.h src/controllers/SongController.cpp src/controllers/SongController.h src/Model/Song.cpp src/Model/Song.h src/utils/MongoManager.cpp src/utils/MongoManager.h)
+set(SOURCE_FILES src/main.cpp src/controllers/HelloWorldController.cpp src/controllers/HelloWorldController.h src/utils/LoggerManager.cpp src/utils/LoggerManager.h src/controllers/SongController.cpp src/controllers/SongController.h src/Model/Song.cpp src/Model/Song.h src/utils/MongoManager.cpp src/utils/MongoManager.h src/utils/base64.cpp src/utils/base64.h)
 
 
 
@@ -50,14 +50,14 @@ set(MONGOOSE_SOURCES
         ${MONGOOSE_CPP}/UploadFile.cpp
         ${MONGOOSE_CPP}/WebController.cpp
         ${MONGOOSE_CPP}/WebSocket.cpp
-        ${MONGOOSE_CPP}/WebSockets.cpp src/utils/LoggerManager.cpp src/utils/LoggerManager.h src/controllers/SongController.cpp src/controllers/SongController.h src/Model/Song.cpp src/Model/Song.h src/utils/MongoManager.cpp src/utils/MongoManager.h)
+        ${MONGOOSE_CPP}/WebSockets.cpp src/utils/LoggerManager.cpp src/utils/LoggerManager.h src/controllers/SongController.cpp src/controllers/SongController.h src/Model/Song.cpp src/Model/Song.h src/utils/MongoManager.cpp src/utils/MongoManager.h src/utils/base64.cpp src/utils/base64.h)
 
 
 set(JSON_SOURCES
         ${LIBS_PATH}/dist/json/json.h
         ${LIBS_PATH}/dist/jsoncpp.cpp
         ${LIBS_PATH}/dist/json/json-forwards.h
-        src/utils/LoggerManager.cpp src/utils/LoggerManager.h src/controllers/SongController.cpp src/controllers/SongController.h src/Model/Song.cpp src/Model/Song.h src/utils/MongoManager.cpp src/utils/MongoManager.h)
+        src/utils/LoggerManager.cpp src/utils/LoggerManager.h src/controllers/SongController.cpp src/controllers/SongController.h src/Model/Song.cpp src/Model/Song.h src/utils/MongoManager.cpp src/utils/MongoManager.h src/utils/base64.cpp src/utils/base64.h)
 
 include_directories(${LIBMONGOCXX_INCLUDE_DIR}/v_noabi)
 include_directories(${LIBBSONCXX_INCLUDE_DIR}/v_noabi)
@@ -76,7 +76,7 @@ include_directories("${JSON_CPP}")
 message(STATUS "FIN!")
 
 
-add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${MONGOOSE_SOURCES} ${JSON_SOURCES} src/utils/LoggerManager.cpp src/utils/LoggerManager.h src/controllers/SongController.cpp src/controllers/SongController.h src/Model/Song.cpp src/Model/Song.h src/utils/MongoManager.cpp src/utils/MongoManager.h)
+add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${MONGOOSE_SOURCES} ${JSON_SOURCES} src/utils/LoggerManager.cpp src/utils/LoggerManager.h src/controllers/SongController.cpp src/controllers/SongController.h src/Model/Song.cpp src/Model/Song.h src/utils/MongoManager.cpp src/utils/MongoManager.h src/utils/base64.cpp src/utils/base64.h)
 target_link_libraries(${PROJECT_NAME} mongocxx bsoncxx)
 target_link_libraries(${PROJECT_NAME} ${LIBMONGOCXX_LIBRARIES})
 target_link_libraries(${PROJECT_NAME} ${LIBBSONCXX_LIBRARIES})
