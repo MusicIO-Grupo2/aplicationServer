@@ -1,20 +1,23 @@
 project(ApplicationServer)
 set(PROJECT_NAME "ApplicationServer")
 set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread")
 
+
+cmake_minimum_required(VERSION 2.8)
 
 set(ROOT_PATH "${${PROJECT_NAME}_SOURCE_DIR}")
 
 
 set(SRC_PATH "${ROOT_PATH}/src")
 
-set(SOURCE_FILES src/main.cpp src/controllers/HelloWorldController.cpp src/controllers/HelloWorldController.h src/utils/LoggerManager.cpp src/utils/LoggerManager.h src/controllers/SongController.cpp src/controllers/SongController.h src/Model/Song.cpp src/Model/Song.h src/utils/MongoManager.cpp src/utils/MongoManager.h src/utils/base64.cpp src/utils/base64.h)
+set(SOURCE_FILES src/main.cpp src/controllers/HelloWorldController.cpp src/controllers/HelloWorldController.h src/utils/LoggerManager.cpp src/utils/LoggerManager.h src/controllers/SongController.cpp src/controllers/SongController.h src/Model/Song.cpp src/Model/Song.h src/utils/MongoManager.cpp src/utils/MongoManager.h src/utils/base64.cpp src/utils/base64.h test/SongControllerTest.cpp test/SongControllerTest.h)
 
-
+message(STATUS "${CMAKE_LIBRARY_PATH}")
 
 set(LIBS_PATH "${ROOT_PATH}/lib")
-set(LIBS_NAMES mongoose json jsoncpp mongocxx libmongocxx libbsoncxx spdlog)
+set(LIBS_NAMES mongoose json jsoncpp mongocxx cppunit libmongocxx libbsoncxx spdlog)
 foreach (LIB ${LIBS_NAMES})
     find_library(LIB{LIB} NAMES ${LIB})
     if (LIB{LIB}) #False si es 0, OFF, NO, FALSE, N, IGNORE, NOTFOUND, vacio, o si termina en "-NOTFOUND". Caso contrario es TRUE.
@@ -50,14 +53,14 @@ set(MONGOOSE_SOURCES
         ${MONGOOSE_CPP}/UploadFile.cpp
         ${MONGOOSE_CPP}/WebController.cpp
         ${MONGOOSE_CPP}/WebSocket.cpp
-        ${MONGOOSE_CPP}/WebSockets.cpp src/utils/LoggerManager.cpp src/utils/LoggerManager.h src/controllers/SongController.cpp src/controllers/SongController.h src/Model/Song.cpp src/Model/Song.h src/utils/MongoManager.cpp src/utils/MongoManager.h src/utils/base64.cpp src/utils/base64.h)
+        ${MONGOOSE_CPP}/WebSockets.cpp src/utils/LoggerManager.cpp src/utils/LoggerManager.h src/controllers/SongController.cpp src/controllers/SongController.h src/Model/Song.cpp src/Model/Song.h src/utils/MongoManager.cpp src/utils/MongoManager.h src/utils/base64.cpp src/utils/base64.h test/SongControllerTest.cpp test/SongControllerTest.h)
 
 
 set(JSON_SOURCES
         ${LIBS_PATH}/dist/json/json.h
         ${LIBS_PATH}/dist/jsoncpp.cpp
         ${LIBS_PATH}/dist/json/json-forwards.h
-        src/utils/LoggerManager.cpp src/utils/LoggerManager.h src/controllers/SongController.cpp src/controllers/SongController.h src/Model/Song.cpp src/Model/Song.h src/utils/MongoManager.cpp src/utils/MongoManager.h src/utils/base64.cpp src/utils/base64.h)
+        src/utils/LoggerManager.cpp src/utils/LoggerManager.h src/controllers/SongController.cpp src/controllers/SongController.h src/Model/Song.cpp src/Model/Song.h src/utils/MongoManager.cpp src/utils/MongoManager.h src/utils/base64.cpp src/utils/base64.h test/SongControllerTest.cpp test/SongControllerTest.h)
 
 include_directories(${LIBMONGOCXX_INCLUDE_DIR}/v_noabi)
 include_directories(${LIBBSONCXX_INCLUDE_DIR}/v_noabi)
@@ -76,7 +79,7 @@ include_directories("${JSON_CPP}")
 message(STATUS "FIN!")
 
 
-add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${MONGOOSE_SOURCES} ${JSON_SOURCES} src/utils/LoggerManager.cpp src/utils/LoggerManager.h src/controllers/SongController.cpp src/controllers/SongController.h src/Model/Song.cpp src/Model/Song.h src/utils/MongoManager.cpp src/utils/MongoManager.h src/utils/base64.cpp src/utils/base64.h)
-target_link_libraries(${PROJECT_NAME} mongocxx bsoncxx)
+add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${MONGOOSE_SOURCES} ${JSON_SOURCES} src/utils/LoggerManager.cpp src/utils/LoggerManager.h src/controllers/SongController.cpp src/controllers/SongController.h src/Model/Song.cpp src/Model/Song.h src/utils/MongoManager.cpp src/utils/MongoManager.h src/utils/base64.cpp src/utils/base64.h test/SongControllerTest.cpp test/SongControllerTest.h)
+target_link_libraries(${PROJECT_NAME} mongocxx bsoncxx cppunit)
 target_link_libraries(${PROJECT_NAME} ${LIBMONGOCXX_LIBRARIES})
 target_link_libraries(${PROJECT_NAME} ${LIBBSONCXX_LIBRARIES})
