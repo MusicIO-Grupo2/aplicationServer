@@ -1,7 +1,7 @@
 project(ApplicationServer)
 set(PROJECT_NAME "ApplicationServer")
 set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread")
 
 
 set(ROOT_PATH "${${PROJECT_NAME}_SOURCE_DIR}")
