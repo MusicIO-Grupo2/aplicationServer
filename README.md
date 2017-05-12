@@ -1,3 +1,8 @@
+Coverage:  [![Coverage Status](https://coveralls.io/repos/github/MusicIO-Grupo2/applicationServer/badge.svg?branch=master)](https://coveralls.io/github/MusicIO-Grupo2/applicationServer?branch=master)
+
+                       
+Travis: [![Build Status](https://travis-ci.org/MusicIO-Grupo2/applicationServer.svg?branch=master)](https://travis-ci.org/MusicIO-Grupo2/applicationServer)
+
 # Application Server
 
 

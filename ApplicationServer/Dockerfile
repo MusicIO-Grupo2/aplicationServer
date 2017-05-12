@@ -16,6 +16,7 @@ RUN apt-get -y install    clang-${LLVM_VERSION} \
     libsasl2-dev \
     gdb 
 
+RUN apt-get -y upgrade
 
 # Establece el autor (maintainer) del archivo (tu nombre - el autor del archivo)
 MAINTAINER Nicolas Alvarez

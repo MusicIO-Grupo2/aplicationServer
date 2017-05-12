@@ -3,34 +3,69 @@
 //
 
 #include "SongControllerTest.h"
-#include <mongoose/Request.h>
+#include "../src/controllers/SongController.h"
+#include <bsoncxx/json.hpp>
+#include <mongoose/Server.h>
 #include <json.h>
 
 using namespace CPPUNIT_NS;
 using namespace Mongoose;
+using namespace Json;
+
+CPPUNIT_TEST_SUITE_REGISTRATION(SongControllerTest);
+
+
+SongControllerTest::SongControllerTest() {}
 
 void SongControllerTest::runTest() {
 
 }
 
-//Request buildBasicRequest(string method, string queryString) const {
-//    mg_connection connection;
-//    //Only mock data, method it´s not important
-//    connection.request_method = method.c_str();
-//    connection.num_headers = 0;
-//    char content[] = "mock";
-//    connection.content = content;
-//    connection.content_len = 4;
-//    connection.uri = "mock";
+Request buildBasicRequest(string method, string queryString)  {
+    mg_connection connection;
+    connection.request_method = method.c_str();
+    connection.num_headers = 0;
+    char content[] = "mock";
+    connection.content = content;
+    connection.content_len = 4;
+    connection.uri = "http://localhost:8080/song";
+
+    connection.query_string = queryString.c_str();
+
+    Request request(&connection);
+    return request;
+}
+
+void SongControllerTest::testUploadSong() {
+
+//    Server server(8080);
 //
-//    connection.query_string = queryString.c_str();
 //
-//    Request request(&connection);
-//    return request;
-//}
+//    SongController *songController = new SongController;
 //
-//void SongControllerTest::testUploadSong() {
+//    server.registerController(songController);
 //
-//    Request request = buildBasicRequest("POST", "");
+//    server.start();
+    Request request = buildBasicRequest("POST", "");
 //
-//}
+//    Response *response =  server.handleRequest(request);
+//
+//    songController->setSessions(new Sessions);
+//    songController->setup();
+//
+//    RequestHandler<SongController, JsonResponse> requestHandler(songController, &SongController::uploadSong);
+
+   // Value value = response->get("success", "");
+
+    SongController * songController = new SongController;
+    JsonResponse *response = new JsonResponse;
+    songController->uploadSong(request,*response);
+
+    bool success = response->get("success", true).asBool();
+    string errorMessage = response->get("error", true).asString();
+    CPPUNIT_ASSERT(success == false);
+    CPPUNIT_ASSERT(errorMessage == "No se encontro archivo");
+
+
+
+}
