@@ -17,7 +17,7 @@ set(SOURCE_FILES src/main.cpp src/controllers/HelloWorldController.cpp src/contr
 message(STATUS "${CMAKE_LIBRARY_PATH}")
 
 set(LIBS_PATH "${ROOT_PATH}/lib")
-set(LIBS_NAMES mongoose json jsoncpp mongocxx cppunit libmongocxx libbsoncxx spdlog)
+set(LIBS_NAMES mongoose json jsoncpp mongocxx bsoncxx cppunit libmongocxx libbsoncxx spdlog)
 foreach (LIB ${LIBS_NAMES})
     find_library(LIB{LIB} NAMES ${LIB})
     if (LIB{LIB}) #False si es 0, OFF, NO, FALSE, N, IGNORE, NOTFOUND, vacio, o si termina en "-NOTFOUND". Caso contrario es TRUE.
