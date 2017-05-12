@@ -65,8 +65,16 @@ include_directories(/usr/local/include/bsoncxx/v_noabi/)
 include_directories(/usr/local/include/libmongoc-1.0)
 include_directories(/usr/local/include/libbson-1.0)
 
-target_link_libraries(/usr/local/lib/ mongocxx)
-target_link_libraries(/usr/local/lib/ bsoncxx)
+#target_link_libraries(/usr/local/lib/ mongocxx)
+#target_link_libraries(/usr/local/lib/ bsoncxx)
+
+find_package(libbsoncxx)
+find_package(libmongocxx)
+
+link_directories(
+        ${LIBMONGOCXX_LIBRARY_DIRS}
+        ${LIBBSONCXX_LIBRARY_DIRS}
+)
 
 
 include_directories(${LIBs_PATH}/spdlog)
@@ -82,9 +90,9 @@ include_directories("${MONGOOSE_CPP}")
 include_directories("${JSON_CPP}")
 
 message(STATUS "FIN!")
-#target_link_libraries(${PROJECT_NAME} mongocxx bsoncxx cppunit)
-#target_link_libraries(${PROJECT_NAME} ${LIBMONGOCXX_LIBRARIES})
-#target_link_libraries(${PROJECT_NAME} ${LIBBSONCXX_LIBRARIES})
+
+target_link_libraries(${PROJECT_NAME} ${LIBMONGOCXX_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} ${LIBBSONCXX_LIBRARIES})
 
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${MONGOOSE_SOURCES} ${JSON_SOURCES} src/utils/LoggerManager.cpp src/utils/LoggerManager.h src/controllers/SongController.cpp src/controllers/SongController.h src/Model/Song.cpp src/Model/Song.h src/utils/MongoManager.cpp src/utils/MongoManager.h src/utils/base64.cpp src/utils/base64.h test/SongControllerTest.cpp test/SongControllerTest.h test/mainTest.cpp)
