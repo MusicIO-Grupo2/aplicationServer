@@ -1,0 +1,25 @@
+
+sudo: required
+
+dist: trusty
+
+language: cpp
+
+services:
+  - mongodb
+
+before_script:
+  - sleep 15
+  - mongo mydb_test --eval 'db.addUser("travis", "test");
+
+compiler:
+  - gcc
+
+before_install:
+  - sudo pip install cpp-coveralls
+
+
+install:
+  - cd ApplicationServer
+  - chmod +x install.sh
+  - sudo ./install.sh

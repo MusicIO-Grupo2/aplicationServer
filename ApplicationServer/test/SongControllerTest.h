@@ -10,9 +10,14 @@
 using namespace CPPUNIT_NS;
 
 class SongControllerTest : public CppUnit::TestCase {
+
+CPPUNIT_TEST_SUITE(SongControllerTest);
+        CPPUNIT_TEST(testUploadSong);
+    CPPUNIT_TEST_SUITE_END();
+
 public:
     SongControllerTest( std::string name ) : CppUnit::TestCase( name ) {}
-
+    SongControllerTest();
     void runTest();
 
     void testUploadSong();

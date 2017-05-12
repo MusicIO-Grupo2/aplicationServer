@@ -46,9 +46,16 @@ void SongController::uploadSong(Request &request, JsonResponse &response) {
     request.handleUploads();
     std::vector<Mongoose::UploadFile>::iterator it = request.uploadFiles.begin();
 
-    Song* aSong = new Song("",it->getName(),it->getData(),"tallerSongs");
-    response["songFileName"] = aSong->getSongFileName();
-    response["songID"] = aSong->storeSongInDB();
+    if (it!=request.uploadFiles.end()){
+        Song* aSong = new Song("",it->getName(),it->getData(),"tallerSongs");
+        response["songFileName"] = aSong->getSongFileName();
+        response["songID"] = aSong->storeSongInDB();
+        response["success"] = true;
+    } else {
+        response["success"] = false;
+        response["error"] = "No se encontro archivo";
+    }
+
 
 
 

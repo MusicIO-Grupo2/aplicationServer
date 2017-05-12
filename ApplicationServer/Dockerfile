@@ -23,6 +23,7 @@ RUN apt-get update && apt-get install -y \
 #    libsasl2-dev \
      gdb 
 
+RUN apt-get -y upgrade
 
 # Establece el autor (maintainer) del archivo (tu nombre - el autor del archivo)
 MAINTAINER Nicolas Alvarez
