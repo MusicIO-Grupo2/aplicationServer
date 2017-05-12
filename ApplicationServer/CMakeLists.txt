@@ -62,8 +62,12 @@ set(JSON_SOURCES
         ${LIBS_PATH}/dist/json/json-forwards.h
         src/utils/LoggerManager.cpp src/utils/LoggerManager.h src/controllers/SongController.cpp src/controllers/SongController.h src/Model/Song.cpp src/Model/Song.h src/utils/MongoManager.cpp src/utils/MongoManager.h src/utils/base64.cpp src/utils/base64.h test/SongControllerTest.cpp test/SongControllerTest.h test/mainTest.cpp)
 
-include_directories(${LIBMONGOCXX_INCLUDE_DIR}/v_noabi)
-include_directories(${LIBBSONCXX_INCLUDE_DIR}/v_noabi)
+include_directories(/usr/local/include/mongocxx/v_noabi)
+include_directories(/usr/local/include/bsoncxx/v_noabi)
+include_directories(/usr/local/include/libmongoc-1.0)
+include_directories(/usr/local/include/libbson-1.0)
+
+
 include_directories(${LIBs_PATH}/spdlog)
 link_directories(${LIBs_PATH}/spdlog)
 
