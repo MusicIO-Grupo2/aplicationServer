@@ -5,7 +5,6 @@ install_dir="$root_dir/temp_install"
 
 # Remove old libraries, ensure use right versions
 echo "Search and remove old libs"
-    find / -type f -name "librocksdb.a" -exec rm {} \;
     find / -type f -name "libjsoncpp.a" -exec rm {} \;
     find / -type f -name "libgtest.a" -exec rm --force {} \;
     find / -type f -name "libgtest_main.a" -exec rm --force {} \;
@@ -23,6 +22,21 @@ echo "Installing libraries"
 apt-get install -y wget
 mkdir -p temp_install && \
 cd temp_install && \
+
+echo "MONGO DRIVER"
+apt-get install -y pkg-config libssl-dev libsasl2-dev
+wget https://github.com/mongodb/mongo-c-driver/releases/download/1.4.2/mongo-c-driver-1.4.2.tar.gz
+tar xzf mongo-c-driver-1.4.2.tar.gz
+cd mongo-c-driver-1.4.2
+./configure
+
+curl -OL https://github.com/mongodb/mongo-cxx-driver/archive/r3.0.2.tar.gz
+tar -xzf r3.0.2.tar.gz
+cd mongo-cxx-driver-r3.0.2/build
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..
+sudo make EP_mnmlstc_core
+make && sudo make install
+
 
 
 cd $install_dir
@@ -51,6 +65,7 @@ make install && \
 
 cd $root_dir
 rm -rf temp_install
+
 
 echo "Make and install"
 mkdir -p build && cd build && \

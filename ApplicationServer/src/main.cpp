@@ -19,7 +19,7 @@ using bsoncxx::builder::stream::finalize;
 using bsoncxx::builder::stream::open_array;
 using bsoncxx::builder::stream::open_document;
 
-int mainn() {
+int main() {
 
     const int dir_err = system("mkdir -p tallerSongs");
     if (-1 == dir_err)

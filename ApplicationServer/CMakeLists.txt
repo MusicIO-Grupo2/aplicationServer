@@ -2,7 +2,7 @@ project(ApplicationServer)
 set(PROJECT_NAME "ApplicationServer")
 set(CMAKE_CXX_STANDARD 11)
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread   -L/usr/local/lib -lmongocxx -lbsoncxx")
 
 
 cmake_minimum_required(VERSION 2.8)
@@ -17,7 +17,7 @@ set(SOURCE_FILES src/main.cpp src/controllers/HelloWorldController.cpp src/contr
 message(STATUS "${CMAKE_LIBRARY_PATH}")
 
 set(LIBS_PATH "${ROOT_PATH}/lib")
-set(LIBS_NAMES mongoose json jsoncpp mongocxx cppunit libmongocxx libbsoncxx spdlog)
+set(LIBS_NAMES mongoose json jsoncpp mongocxx bsoncxx cppunit libmongocxx libbsoncxx spdlog)
 foreach (LIB ${LIBS_NAMES})
     find_library(LIB{LIB} NAMES ${LIB})
     if (LIB{LIB}) #False si es 0, OFF, NO, FALSE, N, IGNORE, NOTFOUND, vacio, o si termina en "-NOTFOUND". Caso contrario es TRUE.
@@ -62,8 +62,12 @@ set(JSON_SOURCES
         ${LIBS_PATH}/dist/json/json-forwards.h
         src/utils/LoggerManager.cpp src/utils/LoggerManager.h src/controllers/SongController.cpp src/controllers/SongController.h src/Model/Song.cpp src/Model/Song.h src/utils/MongoManager.cpp src/utils/MongoManager.h src/utils/base64.cpp src/utils/base64.h test/SongControllerTest.cpp test/SongControllerTest.h test/mainTest.cpp)
 
-include_directories(${LIBMONGOCXX_INCLUDE_DIR}/v_noabi)
-include_directories(${LIBBSONCXX_INCLUDE_DIR}/v_noabi)
+include_directories(/usr/local/include/mongocxx/v_noabi/)
+include_directories(/usr/local/include/bsoncxx/v_noabi/)
+include_directories(/usr/local/include/libmongoc-1.0)
+include_directories(/usr/local/include/libbson-1.0)
+
+
 include_directories(${LIBs_PATH}/spdlog)
 link_directories(${LIBs_PATH}/spdlog)
 
