@@ -53,9 +53,6 @@ cd $root_dir
 rm -rf temp_install
 
 
-mv /usr/local/include/bsoncxx/v_noabi/ /usr/local/include/bsoncxx
-mv /usr/local/include/mongocxx/v_noabi/ /usr/local/include/mongocxx
-
 echo "Make and install"
 mkdir -p build && cd build && \
 cmake .. && make
