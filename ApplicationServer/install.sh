@@ -61,10 +61,10 @@ cd mongoose-cpp-master && \
 cmake . && \
 make install && \
 
-
-
 cd $root_dir
 rm -rf temp_install
+
+ln -s . bsoncxx /usr/local/include/bsoncxx/v_noabi
 
 
 echo "Make and install"

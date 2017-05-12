@@ -80,9 +80,5 @@ include_directories("${JSON_CPP}")
 
 message(STATUS "FIN!")
 
-target_link_libraries(${PROJECT_NAME} ${LIBMONGOCXX_LIBRARIES})
-target_link_libraries(${PROJECT_NAME} ${LIBBSONCXX_LIBRARIES})
-
-
 add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${MONGOOSE_SOURCES} ${JSON_SOURCES} src/utils/LoggerManager.cpp src/utils/LoggerManager.h src/controllers/SongController.cpp src/controllers/SongController.h src/Model/Song.cpp src/Model/Song.h src/utils/MongoManager.cpp src/utils/MongoManager.h src/utils/base64.cpp src/utils/base64.h test/SongControllerTest.cpp test/SongControllerTest.h test/mainTest.cpp)
 
