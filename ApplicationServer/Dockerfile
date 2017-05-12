@@ -5,23 +5,26 @@ USER root
 COPY ./ /home
 COPY /include/ /usr/local/include/
 
-#RUN apt-get update
+#RUN cd ApplicationServer
+RUN chmod +x /home/install.sh
+RUN ./home/install.sh
 
+#RUN apt-get update
 #RUN apt-get -y install    clang-${LLVM_VERSION} \
 
-RUN apt-get update && apt-get install -y \
+#RUN apt-get update && apt-get install -y \
 
-    clang-${LLVM_VERSION} \
-    cmake \
-    cmake-curses-gui \
-    gcc \
-    g++ \
-    libcppunit-dev \
+#    clang-${LLVM_VERSION} \
+#    cmake \
+#    cmake-curses-gui \
+#    gcc \
+#    g++ \
+#    libcppunit-dev \
 #    libmongoc-1.0-0 \
 #    pkg-config\
 #    libssl-dev\
 #    libsasl2-dev \
-     gdb 
+#     gdb 
 
 RUN apt-get -y upgrade
 
