@@ -24,16 +24,6 @@ apt-get install -y wget
 mkdir -p temp_install && \
 cd temp_install && \
 
-echo "Installing rocksDB"
-wget https://github.com/facebook/rocksdb/archive/v4.4.1.zip && \
-unzip v4.4.1.zip && \
-cd rocksdb-4.4.1 && \
-make shared_lib && \
-sudo install -d /usr/include && \
-sudo cp -r include/rocksdb /usr/include && \
-sudo install -m755 -D librocksdb.so.4.4.1 /usr/lib/librocksdb.so.4.4 && \
-sudo install -m755 -D librocksdb.so.4.4.1 /usr/lib/librocksdb.so && \
-sudo install -D -m644 LICENSE "/usr/share/licenses/$pkgname/LICENSE" && \
 
 cd $install_dir
 echo "Installing jsoncpp"
@@ -58,15 +48,6 @@ cmake . && \
 make install && \
 
 
-
-echo "Installing Casablanca"
-git clone https://github.com/Microsoft/cpprestsdk.git casablanca && \
-cd casablanca/Release && \
-mkdir build.debug && \
-cd build.debug && \
-    cmake .. -DCMAKE_BUILD_TYPE=Debug && \
-make install
-ldconfig -v
 
 cd $root_dir
 rm -rf temp_install
