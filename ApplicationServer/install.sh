@@ -5,7 +5,6 @@ install_dir="$root_dir/temp_install"
 
 # Remove old libraries, ensure use right versions
 echo "Search and remove old libs"
-    find / -type f -name "librocksdb.a" -exec rm {} \;
     find / -type f -name "libjsoncpp.a" -exec rm {} \;
     find / -type f -name "libgtest.a" -exec rm --force {} \;
     find / -type f -name "libgtest_main.a" -exec rm --force {} \;
@@ -52,6 +51,7 @@ make install && \
 cd $root_dir
 rm -rf temp_install
 
+ls /usr/local/include/bsoncxx
 
 echo "Make and install"
 mkdir -p build && cd build && \
