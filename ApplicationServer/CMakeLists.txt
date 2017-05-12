@@ -65,17 +65,6 @@ include_directories(/usr/local/include/bsoncxx/v_noabi/)
 include_directories(/usr/local/include/libmongoc-1.0)
 include_directories(/usr/local/include/libbson-1.0)
 
-#target_link_libraries(/usr/local/lib/ mongocxx)
-#target_link_libraries(/usr/local/lib/ bsoncxx)
-
-find_package(libbsoncxx)
-find_package(libmongocxx)
-
-link_directories(
-        ${LIBMONGOCXX_LIBRARY_DIRS}
-        ${LIBBSONCXX_LIBRARY_DIRS}
-)
-
 
 include_directories(${LIBs_PATH}/spdlog)
 link_directories(${LIBs_PATH}/spdlog)
