@@ -1,0 +1,8 @@
+  app:
+    build: .
+    ports:
+    - "8080:8080"
+  mongodb:
+    image: 'bitnami/mongodb:latest'
+    ports:
+      - "8090:27017"
