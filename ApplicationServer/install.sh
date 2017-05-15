@@ -30,9 +30,9 @@ tar xzf mongo-c-driver-1.4.2.tar.gz
 cd mongo-c-driver-1.4.2
 ./configure
 
-curl -OL https://github.com/mongodb/mongo-cxx-driver/archive/r3.0.2.tar.gz
-tar -xzf r3.0.2.tar.gz
-cd mongo-cxx-driver-r3.0.2/build
+curl -OL  https://github.com/mongodb/mongo-cxx-driver/archive/r3.1.1.tar.gz
+tar -xzf r3.1.1.tar.gz
+cd mongo-cxx-driver-r3.1.1/build
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..
 sudo make EP_mnmlstc_core
 make && sudo make install
