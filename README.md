@@ -17,6 +17,11 @@ Esta aplicación cuenta con una base de datos mongo, para lo cual es necesario q
 
 * [Mongocxx Driver](https://mongodb.github.io/mongo-cxx-driver/mongocxx-v3/installation/) 
 
+* CppUnit: 
+```
+$ sudo apt-get install libcppunit-dev
+```
+
 Es necesario una version de [CMake](https://cmake.org/download/) de 3.7 mínima.
 
 ## Compilación
