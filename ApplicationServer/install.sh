@@ -1,6 +1,7 @@
 #!/bin/bash
 
 root_dir=`pwd`
+mkdir $root_dir/temp_install
 install_dir="$root_dir/temp_install"
 
 # Remove old libraries, ensure use right versions
@@ -30,12 +31,21 @@ tar xzf mongo-c-driver-1.4.2.tar.gz
 cd mongo-c-driver-1.4.2
 ./configure
 
-curl -OL https://github.com/mongodb/mongo-cxx-driver/archive/r3.0.2.tar.gz
-tar -xzf r3.0.2.tar.gz
-cd mongo-cxx-driver-r3.0.2/build
+curl -OL https://github.com/mongodb/mongo-cxx-driver/archive/r3.1.1.tar.gz
+tar -xzf r3.1.1.tar.gz
+cd mongo-cxx-driver-r3.1.1/build
+echo "making mongo driver"
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..
 sudo make EP_mnmlstc_core
 make && sudo make install
+
+
+#curl -OL https://github.com/mongodb/mongo-cxx-driver/archive/r3.0.2.tar.gz
+#tar -xzf r3.0.2.tar.gz
+#cd mongo-cxx-driver-r3.0.2/build
+#cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..
+#sudo make EP_mnmlstc_core
+#make && sudo make install
 
 
 
@@ -61,10 +71,9 @@ cd mongoose-cpp-master && \
 cmake . && \
 make install && \
 
+
 cd $root_dir
 rm -rf temp_install
-
-ln -s . bsoncxx /usr/local/include/bsoncxx/v_noabi
 
 
 echo "Make and install"
