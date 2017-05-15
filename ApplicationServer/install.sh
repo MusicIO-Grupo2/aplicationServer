@@ -24,12 +24,19 @@ apt-get install -y wget
 mkdir -p temp_install && \
 cd temp_install && \
 
-echo "MONGO DRIVER"
+echo "MONGO DRIVER 1.6.2"
 apt-get install -y pkg-config libssl-dev libsasl2-dev
-wget https://github.com/mongodb/mongo-c-driver/releases/download/1.4.2/mongo-c-driver-1.4.2.tar.gz
-tar xzf mongo-c-driver-1.4.2.tar.gz
-cd mongo-c-driver-1.4.2
-./configure
+wget https://github.com/mongodb/mongo-c-driver/releases/download/1.6.2/mongo-c-driver-1.6.2.tar.gz
+tar xzf mongo-c-driver-1.6.2.tar.gz
+cd mongo-c-driver-1.6.2
+./configure --disable-automatic-init-and-cleanup
+
+echo "libbson"
+
+make
+sudo make install
+
+echo "fin libbson"
 
 curl -OL https://github.com/mongodb/mongo-cxx-driver/archive/r3.1.1.tar.gz
 tar -xzf r3.1.1.tar.gz
