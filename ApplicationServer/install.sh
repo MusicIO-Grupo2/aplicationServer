@@ -82,9 +82,6 @@ make install && \
 cd $root_dir
 rm -rf temp_install
 
-sudo apt-get update
-sudo apt-get upgrade
-
 echo "Make and install"
 mkdir -p build && cd build && \
 cmake .. && make
