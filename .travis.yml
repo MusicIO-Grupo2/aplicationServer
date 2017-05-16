@@ -22,3 +22,6 @@ install:
   - cd ApplicationServer
   - chmod +x install.sh
   - sudo ./install.sh
+
+script:
+  - ctest
