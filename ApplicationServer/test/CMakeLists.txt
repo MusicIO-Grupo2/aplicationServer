@@ -1,4 +1,4 @@
-add_executable(SongControllerTest ${MONGOOSE_SOURCES} mainTest.cpp)
+add_executable(SongControllerTest ${MONGOOSE_SOURCES} main.cpp)
 
 target_link_libraries(SongControllerTest mongoose model controllers utils ${LIBS_NAMES})
 

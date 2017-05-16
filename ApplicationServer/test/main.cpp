@@ -5,7 +5,7 @@
 #include <cppunit/ui/text/TestRunner.h>
 #include "SongControllerTest.h"
 
-int mainn( int argc, char **argv)
+int main( int argc, char **argv)
 {
     CppUnit::TextUi::TestRunner runner;
     runner.addTest( SongControllerTest::suite() );
