@@ -32,7 +32,7 @@ set (SOURCES
 
 set (MONGOOSE_CPP "${PROJECT_SOURCE_DIR}/mongoose")
 
-include_directories ("${PROJECT_SOURCE_DIR}")
+include_directories ("../..")
 
 if (ENABLE_STATS)
     add_definitions("-DENABLE_STATS")
@@ -126,19 +126,19 @@ if (EXAMPLES)
 
     if (CPP_BINDING)
         add_executable (helloworld examples/helloworld.cpp)
-        target_link_libraries (helloworld  mongoose)
+        target_link_libraries (helloworld mongoose)
 
         add_executable (cpp examples/main.cpp)
-        target_link_libraries (cpp  mongoose)
+        target_link_libraries (cpp mongoose)
 
         if (HAS_JSONCPP)
             add_executable (json_api examples/json.cpp)
-            target_link_libraries (json_api  mongoose)
+            target_link_libraries (json_api mongoose)
         endif (HAS_JSONCPP)
 
         if (WEBSOCKET)
             add_executable (cpp_websocket examples/websocket.cpp)
-            target_link_libraries (cpp_websocket  mongoose)
+            target_link_libraries (cpp_websocket mongoose)
         endif (WEBSOCKET)
     endif (CPP_BINDING)
 endif (EXAMPLES)
