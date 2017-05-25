@@ -3,7 +3,7 @@ FROM ubuntu:latest
 USER root
 
 COPY ./ /home
-COPY /include/ /usr/local/include/
+#COPY /include/ /usr/local/include/
 
 #RUN cd ApplicationServer
 RUN chmod +x /home/install.sh
