@@ -86,6 +86,7 @@ cd mongoose-cpp-master && \
 cmake . && \
 make install && \
 
+sudo apt-get upgrade
 
 cd $root_dir
 rm -rf temp_install
