@@ -4,6 +4,7 @@ root_dir=`pwd`
 mkdir $root_dir/temp_install
 install_dir="$root_dir/temp_install"
 
+
 # Remove old libraries, ensure use right versions
 echo "Search and remove old libs"
     find / -type f -name "libjsoncpp.a" -exec rm {} \;
@@ -16,7 +17,7 @@ echo "Search end"
 # Instalación de dependencias y herramientas
 echo "Installing tools and dependencies"
 apt-get update
-apt-get install -y --assume-yes --force-yes libsnappy-dev zlib1g-dev libbz2-dev libgflags-dev cmake libcppunit-doc libcppunit-dev lcov libboost-all-dev libssl-dev git
+apt-get install -y --assume-yes --force-yes  libsnappy-dev zlib1g-dev libbz2-dev libgflags-dev cmake libcppunit-doc libcppunit-dev lcov libboost-all-dev libssl-dev git
 
 ## Instala las librerías
 echo "Installing libraries"
@@ -37,6 +38,13 @@ make
 sudo make install
 
 echo "fin libbson"
+
+apt-get install sudo
+sudo apt-get install curl
+echo "OK CURL"
+sudo apt-get install zip unzip
+echo "OK UNZIP"
+
 
 curl -OL https://github.com/mongodb/mongo-cxx-driver/archive/r3.1.1.tar.gz
 tar -xzf r3.1.1.tar.gz
