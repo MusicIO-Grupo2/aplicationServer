@@ -6,8 +6,8 @@ COPY ./ /home
 COPY /include/ /usr/local/include/
 
 #RUN cd ApplicationServer
-RUN chmod +x /home/install.sh
-RUN ./home/install.sh
+RUN chmod +x /home/installdocker.sh
+RUN ./home/installdocker.sh
 
 #RUN apt-get update
 #RUN apt-get -y install    clang-${LLVM_VERSION} \
@@ -26,7 +26,7 @@ RUN ./home/install.sh
 #    libsasl2-dev \
 #     gdb 
 
-RUN apt-get -y upgrade
+#RUN apt-get -y upgrade
 
 # Establece el autor (maintainer) del archivo (tu nombre - el autor del archivo)
 MAINTAINER Nicolas Alvarez
