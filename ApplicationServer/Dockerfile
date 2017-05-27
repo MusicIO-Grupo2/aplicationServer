@@ -3,7 +3,7 @@ FROM ubuntu:latest
 USER root
 
 COPY ./ /home
-COPY /include/ /usr/local/include/
+#COPY /include/ /usr/local/include/
 
 #RUN cd ApplicationServer
 RUN chmod +x /home/installdocker.sh
@@ -44,5 +44,5 @@ ENV CPLUS_INCLUDE_PATH=/libs/include
 
 WORKDIR /home/build
 
-CMD ["bash" , "./ApplicationServer"]
+CMD ["/bin/bash" , "./ApplicationServer" , "0.0.0.0"]
 

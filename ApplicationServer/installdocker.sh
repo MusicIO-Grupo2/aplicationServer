@@ -25,6 +25,12 @@ apt-get install -y wget
 mkdir -p temp_install && \
 cd temp_install && \
 
+apt-get install sudo
+sudo apt-get install curl
+echo "OK CURL"
+sudo apt-get install zip unzip
+echo "OK UNZIP"
+
 echo "MONGO DRIVER 1.6.2"
 apt-get install -y pkg-config libssl-dev libsasl2-dev
 wget https://github.com/mongodb/mongo-c-driver/releases/download/1.6.2/mongo-c-driver-1.6.2.tar.gz
@@ -33,17 +39,12 @@ cd mongo-c-driver-1.6.2
 ./configure --disable-automatic-init-and-cleanup
 
 echo "libbson"
-
 make
 sudo make install
 
 echo "fin libbson"
 
-apt-get install sudo
-sudo apt-get install curl
-echo "OK CURL"
-sudo apt-get install zip unzip
-echo "OK UNZIP"
+
 
 
 curl -OL https://github.com/mongodb/mongo-cxx-driver/archive/r3.1.1.tar.gz
@@ -92,5 +93,8 @@ cd $root_dir
 rm -rf temp_install
 
 echo "Make and install"
-mkdir -p build && cd build && \
-cmake .. && make
+pwd
+echo $root_dir
+cd /home
+#mkdir -p build && cd build && \
+#cmake .. && make
