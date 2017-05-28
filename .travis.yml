@@ -32,7 +32,6 @@ install:
   - lcov --version
 
 script:
-  - ./configure --enable-gcov && make && make check
   - cd ${TRAVIS_BUILD_DIR}/ApplicationServer
   - cmake .
   - make
