@@ -14,7 +14,7 @@ set(ROOT_PATH "${${PROJECT_NAME}_SOURCE_DIR}")
 
 set(SRC_PATH "${ROOT_PATH}/src")
 
-set(SOURCE_FILES src/controllers/HelloWorldController.cpp src/controllers/HelloWorldController.h src/utils/LoggerManager.cpp src/utils/LoggerManager.h src/controllers/SongController.cpp src/controllers/SongController.h src/Model/Song.cpp src/Model/Song.h src/utils/MongoManager.cpp src/utils/MongoManager.h src/utils/base64.cpp src/utils/base64.h )
+set(SOURCE_FILES src/controllers/HelloWorldController.cpp src/controllers/HelloWorldController.h src/utils/LoggerManager.cpp src/utils/LoggerManager.h src/controllers/SongController.cpp src/controllers/SongController.h src/Model/Song.cpp src/Model/Song.h)
 
 message(STATUS "${CMAKE_LIBRARY_PATH}")
 

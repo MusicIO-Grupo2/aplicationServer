@@ -1,4 +1,4 @@
 project(${PROJECT_NAME} C CXX)
 
-add_library(utils base64.cpp base64.h LoggerManager.cpp LoggerManager.h MongoManager.cpp MongoManager.h)
+add_library(utils LoggerManager.cpp LoggerManager.h)
 target_link_libraries(utils ${LIBS_NAMES})

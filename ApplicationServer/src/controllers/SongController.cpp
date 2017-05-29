@@ -9,7 +9,6 @@
 #include "../utils/LoggerManager.h"
 #include "SongController.h"
 #include "../Model/Song.h"
-#include "../utils/base64.h"
 
 using namespace Mongoose;
 
